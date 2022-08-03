@@ -13,14 +13,14 @@
         <label for="HouseNo" class="col-form-label required">บ้านเลขที่</label>
          </div>
           <div class="col-3">
-         <input type="text" id="HouseNo" class="form-control" aria-describedby="passwordHelpInline">
+         <input type="text" id="HouseNo" class="form-control" aria-describedby="HouseNoDesc">
          </div>
          <div class="col-auto"></div>
          <div class="col-2">
         <label for="ConstDeedNo" class="col-form-label">ก่อสร้างบนโฉนดเลขที่</label>
          </div>
           <div class="col-3">
-         <input type="text" id="ConstDeedNo" class="form-control" aria-describedby="passwordHelpInline">
+         <input type="text" id="ConstDeedNo" class="form-control" aria-describedby="ConstDeedNoDesc">
          </div>
          </div>
          <div class="row mb-3 align-items-center">
@@ -40,13 +40,13 @@
         <label for="SectionScaleEncr" class="col-form-label">ส่วน/ขนาดที่รุกล้ำ(ตารางเมตร)</label>
          </div>
           <div class="col-3">
-         <input type="text" id="SectionScaleEncr" class="form-control" aria-describedby="passwordHelpInline">
+         <input type="text" id="SectionScaleEncr" class="form-control" aria-describedby="SectionScaleEncrDesc">
          </div>
          </div>
          <div class="row">
              <div class="col-auto"></div>
              <div class="col-2">
-                <label for="CollatPrice" class="col-form-label">สภาพการก่อสร้าง</label>
+                <label for="ConstProgOriBuilding" class="col-form-label">สภาพการก่อสร้าง</label>
              </div>
              <div class="col-1" style="width:50px;">
                  <input class="form-check-input" style="width: 2rem; height: 2rem;" type="checkbox" id="ConstProgOriBuilding" aria-describedby="checked" onchange="constProgOnChange(event);">
@@ -79,14 +79,14 @@
         <label for="BuildingYr" class="col-form-label">อายุอาคาร(ปี)</label>
          </div>
           <div class="col-3">
-         <input type="text" id="BuildingYr" class="form-control" aria-describedby="passwordHelpInline">
+         <input type="text" id="BuildingYr" class="form-control" aria-describedby="BuildingYrDesc">
          </div>
          <div class="col-auto"></div>
          <div class="col-2">
         <label for="ConstPermitDate" class="col-form-label">วันที่ใบอนุญาตก่อสร้างหมดอายุ</label>
          </div>
           <div class="col-3">
-         <input type="text" id="ConstPermitDate" class="form-control" aria-describedby="passwordHelpInline">
+         <input type="text" id="ConstPermitDate" class="form-control" aria-describedby="ConstPermitDateDesc">
          </div>
          </div>
          <div class="row mb-3 align-items-center">
@@ -138,7 +138,7 @@
         <label for="BuildingYr" class="col-form-label">จำนวนชั้น</label>
          </div>
           <div class="col-3">
-         <input type="text" id="BuildingYr" class="form-control" aria-describedby="passwordHelpInline">
+         <input type="text" id="BuildingYr" class="form-control" aria-describedby="BuildingYrDesc">
          </div>
          <div class="col-auto"></div>
          <div class="col-2">
@@ -183,7 +183,210 @@
 </select>
          </div>
          </div>
-         <button type="submit">Save</button>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="Wall" class="col-form-label">ผนัง</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control" id="Wall" name="Wall"><option value="">โปรดเลือก...</option>
+<option value="03">ไม้</option>
+<option value="02">กระเบื้องแผ่นเรียบ</option>
+<option value="01">ก่ออิฐ</option>
+<option value="04">ผนังสำเร็จรูป</option>
+<option value="05">อื่นๆ</option>
+</select>
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="Painting" class="col-form-label">การทาสี</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control" id="Painting" name="Painting"><option value="">โปรดเลือก...</option>
+<option value="02">ไม่ทาสี</option>
+<option value="01">ทาสี</option>
+</select>
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="Floor1" class="col-form-label">พื้นชั้น 1</label>
+         </div>
+         <div class="col-3">
+         <select class="form-control" id="Floor1" name="Floor1"><option value="">โปรดเลือก...</option>
+<option value="02">ไม้</option>
+<option value="01">คอนกรีตเสริมเหล็ก</option>
+<option value="03">สมาร์ทบอร์ด</option>
+<option value="04">อื่นๆ</option>
+</select>
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="Floor1Surface" class="col-form-label">ผิวพื้นชั้น1</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control" id="Floor1Surface" name="Floor1Surface"><option value="">โปรดเลือก...</option>
+<option value="04">แกรนิตโต้</option>
+<option value="06">ไม้ / ปาร์เก้</option>
+<option value="01">กระเบื้อง</option>
+<option value="02">กระเบื้องเซรามิค(เคลือบ)</option>
+<option value="03">กระเบื้องดินเผา</option>
+<option value="05">กระเบื้องยาง</option>
+<option value="09">พื้นปูนขัดมัน</option>
+<option value="10">ลามิเนต</option>
+<option value="08">หินขัด</option>
+<option value="07">หินอ่อน</option>
+<option value="11">อื่น ๆ</option>
+</select>
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="Floor2" class="col-form-label">พื้นชั้น 2</label>
+         </div>
+         <div class="col-3">
+         <select class="form-control" id="Floor2" name="Floor2"><option value="">โปรดเลือก...</option>
+<option value="02">ไม้</option>
+<option value="01">คอนกรีตเสริมเหล็ก</option>
+<option value="03">สมาร์ทบอร์ด</option>
+<option value="04">อื่นๆ</option>
+</select>
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="Floor2Surface" class="col-form-label">ผิวพื้นชั้น2</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control" id="Floor2Surface" name="Floor2Surface"><option value="">โปรดเลือก...</option>
+<option value="04">แกรนิตโต้</option>
+<option value="06">ไม้ / ปาร์เก้</option>
+<option value="01">กระเบื้อง</option>
+<option value="02">กระเบื้องเซรามิค(เคลือบ)</option>
+<option value="03">กระเบื้องดินเผา</option>
+<option value="05">กระเบื้องยาง</option>
+<option value="09">พื้นปูนขัดมัน</option>
+<option value="10">ลามิเนต</option>
+<option value="08">หินขัด</option>
+<option value="07">หินอ่อน</option>
+<option value="11">อื่น ๆ</option>
+</select>
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="OthFloor" class="col-form-label">หมายเหตุพื้นชั้นอื่นๆ</label>
+         </div>
+         <div class="col-3">
+         <select class="form-control" id="OthFloor" name="OthFloor"><option value="">โปรดเลือก...</option>
+<option value="02">ไม้</option>
+<option value="01">คอนกรีตเสริมเหล็ก</option>
+<option value="03">สมาร์ทบอร์ด</option>
+<option value="04">อื่นๆ</option>
+</select>
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="OthFloorSurface" class="col-form-label">หมายเหตุผิวพื้นชั้นอื่นๆ</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control" id="OthFloorSurface" name="OthFloorSurface"><option value="">โปรดเลือก...</option>
+<option value="04">แกรนิตโต้</option>
+<option value="06">ไม้ / ปาร์เก้</option>
+<option value="01">กระเบื้อง</option>
+<option value="02">กระเบื้องเซรามิค(เคลือบ)</option>
+<option value="03">กระเบื้องดินเผา</option>
+<option value="05">กระเบื้องยาง</option>
+<option value="09">พื้นปูนขัดมัน</option>
+<option value="10">ลามิเนต</option>
+<option value="08">หินขัด</option>
+<option value="07">หินอ่อน</option>
+<option value="11">อื่น ๆ</option>
+</select>
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="Fence" class="col-form-label">รั้ว</label>
+         </div>
+         <div class="col-3">
+         <select class="form-control" id="Fence" name="Fence"><option value="">โปรดเลือก...</option>
+<option value="03">เหล็ก</option>
+<option value="02">ไม้</option>
+<option value="06">ไม่มีรั้ว</option>
+<option value="01">ซีเมนต์บล็อค</option>
+<option value="07">ลวดตาข่าย</option>
+<option value="08">ลวดหนาม</option>
+<option value="05">สแตนเลส</option>
+<option value="04">อิฐ</option>
+<option value="09">อื่นๆ</option>
+</select>
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="ConstType" class="col-form-label">ประเภทการก่อสร้าง</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control" id="ConstType" name="ConstType"><option value="">โปรดเลือก...</option>
+<option value="02">บ้านจัดสรร</option>
+<option value="01">ปลูกสร้างเอง</option>
+<option value="03">อื่น ๆ</option>
+</select>
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="Village" class="col-form-label">หมู่บ้าน</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="Village" class="form-control" aria-describedby="VillageDesc">
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="UtilOfBuilding" class="col-form-label">การใช้ประโยชน์ของอาคาร</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control" id="UtilOfBuilding" name="UtilOfBuilding"><option value="">โปรดเลือก...</option>
+<option value="04">ใช้เพื่อการแบ่งเช่า</option>
+<option value="05">ใช้เพื่อการอื่นๆ</option>
+<option value="01">ใช้เพื่ออยู่อาศัย</option>
+<option value="02">พักอาศัยไม่น้อยกว่า 30%</option>
+<option value="03">พักอาศัยน้อยกว่า 30%</option>
+</select>
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="BuildingArea" class="col-form-label required">เนื้อที่อาคาร(ตารางเมตร)</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="BuildingArea" class="form-control" aria-describedby="BuildingAreaDesc">
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="FireInsSpace" class="col-form-label required">เนื้อที่ประกันอัคคีภัย(ตารางเมตร)</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="FireInsSpace" class="form-control" aria-describedby="FireInsSpaceDesc">
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="Remark" class="col-form-label">รายละเอียดอื่นๆ</label>
+         </div>
+          <div class="col-3">
+         <input type="text" id="Remark" class="form-control" aria-describedby="RemarkDesc">
+         </div>
+         </div>
+         <div class="row mb-3 align-right">
+         <button type="button" class="btn btn-danger col-1">Save</button>
+         </div>
 </form>
 
 @section Scripts {
