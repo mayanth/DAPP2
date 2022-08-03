@@ -26,7 +26,7 @@
          <div class="row mb-3 align-items-center">
          <div class="col-auto"></div>
         <div class="col-2">
-        <label for="CollatPrice" class="col-form-label">ตำแหน่งก่อสร้าง</label>
+        <label for="ConstSite" class="col-form-label">ตำแหน่งก่อสร้าง</label>
          </div>
           <div class="col-3">
          @*<input type="text" id="CollatPrice" class="form-control" aria-describedby="passwordHelpInline">*@
@@ -92,7 +92,7 @@
          <div class="row mb-3 align-items-center">
          <div class="col-auto"></div>
         <div class="col-2">
-        <label for="CollatPrice" class="col-form-label required">ประเภทอาคาร</label>
+        <label for="BuildingType" class="col-form-label required">ประเภทอาคาร</label>
          </div>
           <div class="col-3">
          <select class="form-control req" id="BuildingType" name="BuildingType"><option value="">โปรดเลือก...</option>
@@ -103,7 +103,7 @@
          </div>
          <div class="col-auto"></div>
          <div class="col-2">
-        <label for="SectionScaleEncr" class="col-form-label required">ลักษณะอาคาร</label>
+        <label for="BuildingModel" class="col-form-label required">ลักษณะอาคาร</label>
          </div>
           <div class="col-3">
          <select class="form-control req" id="BuildingModel" name="BuildingModel"><option value="">โปรดเลือก...</option>
@@ -142,10 +142,45 @@
          </div>
          <div class="col-auto"></div>
          <div class="col-2">
-        <label for="ConstPermitDate" class="col-form-label">การใช้อยู่อาศัย</label>
+        <label for="IsResidential" class="col-form-label">การใช้อยู่อาศัย</label>
          </div>
           <div class="col-3">
-         <input type="text" id="ConstPermitDate" class="form-control" aria-describedby="passwordHelpInline">
+         <select class="form-control" id="IsResidential" name="IsResidential"><option value="">โปรดเลือก...</option>
+<option value="Y">ได้</option>
+<option value="N">ไม่ได้</option>
+</select>
+         </div>
+         </div>
+         <div class="row mb-3 align-items-center">
+         <div class="col-auto"></div>
+        <div class="col-2">
+        <label for="RoofFrame" class="col-form-label">โครงหลังคา</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control" id="RoofFrame" name="RoofFrame"><option value="">โปรดเลือก...</option>
+<option value="03">เหล็ก</option>
+<option value="02">ไม้</option>
+<option value="01">คอนกรีตเสริมเหล็ก</option>
+<option value="05">ตรวจสอบไม่ได้</option>
+<option value="04">อื่นๆ</option>
+</select>
+         </div>
+         <div class="col-auto"></div>
+         <div class="col-2">
+        <label for="Roof" class="col-form-label">ลักษณะอาคาร</label>
+         </div>
+          <div class="col-3">
+         <select class="form-control" id="Roof" name="Roof"><option value="">โปรดเลือก...</option>
+<option value="04">เมทัลชีท</option>
+<option value="05">ไวนิล</option>
+<option value="02">กระเบื้อง</option>
+<option value="06">กระเบื้องดินเผา</option>
+<option value="03">กระเบื้องลอน</option>
+<option value="01">คอนกรีตเสริมเหล็ก</option>
+<option value="08">ตรวจสอบไม่ได้</option>
+<option value="07">สังกะสี</option>
+<option value="09">อื่นๆ</option>
+</select>
          </div>
          </div>
          <button type="submit">Save</button>
